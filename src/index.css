@@ -1,0 +1,181 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Forms Section */
+.top-forms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+/* Form Cards */
+.form-card, .action-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover, .action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-card h2, .action-card h2 {
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+/* Inputs and Selects */
+input, select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 10px 15px;
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #3498db;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  background: #ecf0f1;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+th {
+  background: #34495e;
+  color: #fff;
+}
+
+tr:hover {
+  background: #dfe6e9;
+}
+
+/* Action Buttons in Tables */
+.editBtn, .deleteBtn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.editBtn {
+  background: #27ae60;
+  color: #fff;
+}
+
+.editBtn:hover {
+  background: #2ecc71;
+}
+
+.deleteBtn {
+  background: #c0392b;
+  color: #fff;
+}
+
+.deleteBtn:hover {
+  background: #e74c3c;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-forms {
+    align-items: center;
+  }
+
+  .form-card, .action-card {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

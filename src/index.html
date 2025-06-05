@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    
+    <!-- Sticky Forms Section -->
+    <div class="top-forms">
+      <h1>📚 Library Management System</h1>
+
+      <!-- Add Book & Member -->
+      <div class="forms">
+        <!-- Add Book Form -->
+        <div class="form-card">
+          <h2>Add Book</h2>
+          <input id="bookTitle" type="text" placeholder="Book Title" />
+          <input id="bookAuthor" type="text" placeholder="Author" />
+          <button id="addBook">Add Book</button>
+        </div>
+
+        <!-- Add Member Form -->
+        <div class="form-card">
+          <h2>Add Member</h2>
+          <input id="memberName" type="text" placeholder="Member Name" />
+          <input id="memberEmail" type="email" placeholder="Email" />
+          <input id="memberPhone" type="text" placeholder="Phone" />
+          <button id="addMember">Add Member</button>
+        </div>
+      </div>
+
+      <!-- Borrow & Return -->
+      <div class="actions">
+        <div class="action-card">
+          <h2>Borrow Book</h2>
+          <select id="borrowMember"></select>
+          <select id="borrowBook"></select>
+          <button id="borrowBookButton">Borrow</button>
+        </div>
+
+        <div class="action-card">
+          <h2>Return Book</h2>
+          <select id="returnMember"></select>
+          <select id="returnBookMember"></select>
+          <button id="returnBook">Return</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book and Member Lists -->
+    <h2>Book List</h2>
+    <table id="booksDisplayTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>Member List</h2>
+    <table id="membersDisplayTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Borrowed Books</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="/dist/index.js"></script>
+  </div>
+</body>
+</html>
+
